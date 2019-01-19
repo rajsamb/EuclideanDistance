@@ -1,7 +1,16 @@
 ## Setting up
-> Change autoload foler name from "PHPBoilerplate" to <YourOne>.
-> composer dumpautoload
-> Remove Greetings folder or change namespace to <YourOne>
+> git clone https://github.com/rajsamb/PHPBoilerplate.git <YourProjectName>
+> Change autoload foler name from "PHPBoilerplate" to <YourProjectNamespace>.
+> Remove Greetings folder or change namespace to <YourProjectNamespace>
+> Change composer.json name & description.
+> composer install
+> composer dumpautoload [In case autoloade namespace is chaged after coomposer install]
+
+
+## Setting Git Path:
+> Create Repository on remote copy the repository url and change the git url as below.
+> git remote set-url origin https://github.com/youraccount/YourProject.git
+
 
 ## Running Greeting with the command line:
 > cd src
