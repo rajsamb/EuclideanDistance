@@ -1,21 +1,7 @@
 <?php
-
 require_once '../vendor/autoload.php';
 
 use EuclideanDistance\Worker;
-//use League\Csv\Reader;
-
-//$stream = fopen('../storage/in.csv', 'r');
-// $input->setHeaderOffset(0);
-
-// $headers = $input->getHeader();
-// $coordiantes = $input->getRecords();
-
-// echo '<pre>' . print_r($headers, 1) . '</pre>';
-// echo '<pre>' . print_r($coordiantes, 1) . '</pre>';
-
-//$input = Reader::createFromStream($stream);
-//$input->setDelimiter('')
 
 // Reading From File.
 $worker = new Worker();
@@ -39,7 +25,7 @@ while(!feof($inputCoordiantes)) {
     array_push($outputCoordinates, $calculatedCoordinate);
 }
 
-fclose($inputCoordinate);
+fclose($inputCoordiantes);
 
 if (empty($outputCoordinates)) {
     throw new Exception('No Output coordiantes');
