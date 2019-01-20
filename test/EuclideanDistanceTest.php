@@ -19,7 +19,7 @@ class WorkerTest extends TestCase
     /**
      * @test
      */
-    public function displays_hello_world_message()
+    public function calculates_distance_beteen_x_y_cordinates()
     {
         //Given
         $x1 = 32.9697;
@@ -27,9 +27,9 @@ class WorkerTest extends TestCase
         $x2 = 29.46786;
         $y2 = -98.53506;
 
-        $expectedResult = 262.67779380543;
+        $expectedResult = 3.8019654625189587;
 
-        $actualResult = $this->worker->calculateDistanceInMiles($x1, $y1, $x2, $y2);
+        $actualResult = $this->worker->calculateDistance($x1, $y1, $x2, $y2);
 
         $this->assertEquals(
             $expectedResult,
