@@ -1,6 +1,6 @@
 {
-    "name": "sambhu/php-boilerplate",
-    "description": "PHP BoilerPlate",
+    "name": "sambhu/euclidean-distance",
+    "description": "Euclidean Distance",
     "authors": [
         {
             "name": "Sambhu",
@@ -10,7 +10,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "PHPBoilerplate\\": "src/"
+            "EuclideanDistance\\": "src/"
         }
     },
     "require-dev": {

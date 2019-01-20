@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPBoilerplate\Greetings;
+namespace EuclideanDistance\Calculate;
 
-class Greetings {
+class EuclideanDistance {
     public static function sayHelloWorld() {
         return 'Hello World';
     }

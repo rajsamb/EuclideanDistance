@@ -2,6 +2,6 @@
 
 require_once '../vendor/autoload.php';
 
-use PHPBoilerplate\Greetings\Greetings;
+use EuclideanDistance\Greetings\EuclideanDistance;
 
-echo Greetings::sayHelloWorld();
+echo EuclideanDistance::sayHelloWorld();

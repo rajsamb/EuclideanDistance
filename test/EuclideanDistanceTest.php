@@ -2,9 +2,9 @@
 namespace test;
 
 use PHPUnit\Framework\TestCase;
-use PHPBoilerplate\Greetings\Greetings;
+use EuclideanDistance\Calculate\EuclideanDistance;
 
-class GreetingsTest extends TestCase
+class EuclideanDistanceTest extends TestCase
 {
     /**
      * @test
@@ -13,7 +13,7 @@ class GreetingsTest extends TestCase
     {
         $this->assertEquals(
             'Hello World',
-            Greetings::sayHelloWorld()
+            EuclideanDistance::sayHelloWorld()
         );
     } 
 }
