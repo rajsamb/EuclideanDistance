@@ -4,12 +4,10 @@
     "authors": [
         {
             "name": "Sambhu",
-            "email": "rajsamb@hotmail.com"
+            "email": "sambhu.raj.singh@gmail.com"
         }
     ],
-    "require": {
-        "league/csv": "^9.1"
-    },
+    "require": {},
     "autoload": {
         "psr-4": {
             "EuclideanDistance\\": "src/"

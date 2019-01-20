@@ -3,39 +3,41 @@ require_once '../vendor/autoload.php';
 
 use EuclideanDistance\Worker;
 
-// Reading From File.
 $worker = new Worker();
-
-$inputCoordiantes = fopen('../storage/in.txt', 'r');
 $outputCoordinates = [];
+
+// Reading From File.
 
 /**
  * @TODO: Validation, Handle Exception.
  */
-while(!feof($inputCoordiantes)) {
-    $inputCoordinate = fgetcsv($inputCoordiantes);
+if (($inputCoordiantes = fopen('../storage/in.txt', 'r')) !== false) {
+    while(!feof($inputCoordiantes)) {
+        $inputCoordinate = fgetcsv($inputCoordiantes);
 
-    $calculatedCoordinate = $worker->calculateDistance(
-        $inputCoordinate[0],
-        $inputCoordinate[1],
-        $inputCoordinate[2],
-        $inputCoordinate[3]
-    );
+        $calculatedCoordinate = $worker->calculateDistance(
+            $inputCoordinate[0],
+            $inputCoordinate[1],
+            $inputCoordinate[2],
+            $inputCoordinate[3]
+        );
 
-    array_push($outputCoordinates, $calculatedCoordinate);
+        array_push($outputCoordinates, $calculatedCoordinate);
+    }
+
+
+    fclose($inputCoordiantes);
 }
-
-fclose($inputCoordiantes);
 
 if (empty($outputCoordinates)) {
     throw new Exception('No Output coordiantes');
 }
 
 //Writing to a file.
-$outputFile = fopen('../storage/out.txt', 'w');
+if (($outputFile = fopen('../storage/out.txt', 'w')) !== false) {
+    foreach($outputCoordinates as $outputCoordinate) {
+        fputcsv($outputFile, explode(',', $outputCoordinate));
+    }
 
-foreach($outputCoordinates as $outputCoordinate) {
-    fputcsv($outputFile, explode(',', $outputCoordinate));
+    fclose($outputFile);
 }
-
-fclose($outputFile);
