@@ -7,7 +7,9 @@
             "email": "rajsamb@hotmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "league/csv": "^9.1"
+    },
     "autoload": {
         "psr-4": {
             "EuclideanDistance\\": "src/"
